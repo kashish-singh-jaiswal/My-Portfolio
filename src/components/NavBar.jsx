@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 
 import { navLinks } from '../constants/index.js';
-import { set } from 'lodash';
+
 
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -10,7 +10,7 @@ const NavBar = () => {
     useEffect(() => {
         const handleScroll = () => {
           const isScrolled = window.scrollY > 10;
-          setScrolled(true);
+          setScrolled(isScrolled);
         }
         
         window.addEventListener("scroll", handleScroll);
